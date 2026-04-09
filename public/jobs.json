@@ -1,0 +1,600 @@
+[
+  {
+    "job_id": "fe-ng-001",
+    "employer_name": "NexaCore Labs",
+    "employer_logo": "https://logo.clearbit.com/stripe.com",
+    "job_title": "Frontend Engineer (React)",
+    "job_description": "We are looking for a mid-level React developer to join our fintech startup in Lagos. You will build interactive dashboards and optimize performance.",
+    "job_is_remote": false,
+    "job_posted_at_datetime_utc": "2026-04-07T09:00:00.000Z",
+    "job_city": "Lagos",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": [
+        "2+ years React/Tailwind",
+        "RESTful API integration",
+        "Responsive design"
+      ]
+    },
+    "job_max_salary": 1200000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://nexacore.io/careers"
+  },
+  {
+    "job_id": "be-gl-002",
+    "employer_name": "CloudScale Systems",
+    "employer_logo": "https://logo.clearbit.com/aws.amazon.com",
+    "job_title": "Backend Developer (Node.js)",
+    "job_description": "Join our remote-first team building scalable microservices. Focus on API development and cloud infrastructure.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-04-08T14:30:00.000Z",
+    "job_city": "Remote",
+    "job_country": "US",
+    "job_highlights": {
+      "Qualifications": [
+        "Proficient in Node.js/Express",
+        "PostgreSQL and Redis",
+        "AWS experience"
+      ]
+    },
+    "job_max_salary": 95000,
+    "job_salary_currency": "USD",
+    "job_apply_link": "https://cloudscale.io/jobs"
+  },
+  {
+    "job_id": "ux-ng-003",
+    "employer_name": "SoftRhythm Digital",
+    "employer_logo": "https://logo.clearbit.com/figma.com",
+    "job_title": "UI/UX Designer",
+    "job_description": "Craft beautiful user experiences for our e-commerce platform. Work closely with product teams on Figma.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-04-09T08:15:00.000Z",
+    "job_city": "Abuja",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": [
+        "Portfolio of UI/UX work",
+        "Proficient in Figma",
+        "User research experience"
+      ]
+    },
+    "job_max_salary": 800000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://softrhythm.com/design"
+  },
+  {
+    "job_id": "mb-gl-004",
+    "employer_name": "AppForge Studio",
+    "employer_logo": "https://logo.clearbit.com/expo.dev",
+    "job_title": "React Native Developer",
+    "job_description": "Building cross-platform mobile apps for the fitness industry. Implement new features for iOS and Android.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-04-06T11:20:00.000Z",
+    "job_city": "Remote",
+    "job_country": "UK",
+    "job_highlights": {
+      "Qualifications": [
+        "Experience with React Native",
+        "Native build tools (Xcode/Android Studio)",
+        "Clean code habits"
+      ]
+    },
+    "job_max_salary": 75000,
+    "job_salary_currency": "GBP",
+    "job_apply_link": "https://appforge.io/careers"
+  },
+  {
+    "job_id": "fe-ng-005",
+    "employer_name": "PayVibe",
+    "employer_logo": "https://logo.clearbit.com/flutterwave.com",
+    "job_title": "Junior Frontend Dev",
+    "job_description": "Support our core web team in building payment links and merchant portals.",
+    "job_is_remote": false,
+    "job_posted_at_datetime_utc": "2026-04-05T10:00:00.000Z",
+    "job_city": "Lagos",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": [
+        "HTML/CSS/JS mastery",
+        "Basic React knowledge",
+        "Attention to detail"
+      ]
+    },
+    "job_max_salary": 450000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://payvibe.ng/jobs"
+  },
+  {
+    "job_id": "be-ng-006",
+    "employer_name": "DataSentry",
+    "employer_logo": "https://logo.clearbit.com/mongodb.com",
+    "job_title": "Python Backend Engineer",
+    "job_description": "Building secure data pipelines for financial institutions in West Africa.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-04-04T12:00:00.000Z",
+    "job_city": "Ibadan",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": [
+        "Python/Django proficiency",
+        "MongoDB experience",
+        "Cybersecurity basics"
+      ]
+    },
+    "job_max_salary": 900000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://datasentry.io/careers"
+  },
+  {
+    "job_id": "fe-gl-007",
+    "employer_name": "VercelClone",
+    "employer_logo": "https://logo.clearbit.com/vercel.com",
+    "job_title": "Next.js Specialist",
+    "job_description": "Optimize our edge-rendering capabilities and improve SEO metrics.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-04-03T15:00:00.000Z",
+    "job_city": "Remote",
+    "job_country": "DE",
+    "job_highlights": {
+      "Qualifications": [
+        "Expert Next.js/React",
+        "Server Components experience",
+        "Performance tuning"
+      ]
+    },
+    "job_max_salary": 110000,
+    "job_salary_currency": "EUR",
+    "job_apply_link": "https://vclone.app/careers"
+  },
+  {
+    "job_id": "be-ng-008",
+    "employer_name": "KwaraTech",
+    "employer_logo": "https://logo.clearbit.com/laravel.com",
+    "job_title": "Laravel Developer",
+    "job_description": "Maintaining legacy e-learning platforms and migrating to modern PHP standards.",
+    "job_is_remote": false,
+    "job_posted_at_datetime_utc": "2026-04-02T09:30:00.000Z",
+    "job_city": "Ilorin",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": [
+        "PHP/Laravel expertise",
+        "MySQL database design",
+        "Basic Vue.js knowledge"
+      ]
+    },
+    "job_max_salary": 500000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://kwaratech.ng/jobs"
+  },
+  {
+    "job_id": "ux-gl-009",
+    "employer_name": "PixelPerfect",
+    "employer_logo": "https://logo.clearbit.com/dribbble.com",
+    "job_title": "Lead Product Designer",
+    "job_description": "Set the design language for our global creative platform.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-04-01T16:45:00.000Z",
+    "job_city": "Remote",
+    "job_country": "CA",
+    "job_highlights": {
+      "Qualifications": [
+        "5+ years UX experience",
+        "Design Systems knowledge",
+        "Leadership skills"
+      ]
+    },
+    "job_max_salary": 130000,
+    "job_salary_currency": "USD",
+    "job_apply_link": "https://pixel.design/lead"
+  },
+  {
+    "job_id": "mb-ng-010",
+    "employer_name": "OpayStyle",
+    "employer_logo": "https://logo.clearbit.com/dart.dev",
+    "job_title": "Flutter Developer",
+    "job_description": "Build high-speed mobile wallets for the Nigerian market.",
+    "job_is_remote": false,
+    "job_posted_at_datetime_utc": "2026-03-31T11:00:00.000Z",
+    "job_city": "Lagos",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": [
+        "Dart/Flutter expertise",
+        "Firebase integration",
+        "State management (Provider/Bloc)"
+      ]
+    },
+    "job_max_salary": 700000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://opaystyle.ng/careers"
+  },
+  {
+    "job_id": "fe-ng-011",
+    "employer_name": "EduGrid",
+    "employer_logo": "https://logo.clearbit.com/canvas.com",
+    "job_title": "Frontend Web Dev",
+    "job_description": "Developing interactive quiz features for secondary school students.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-03-30T08:00:00.000Z",
+    "job_city": "Remote",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": ["React.js", "Tailwind CSS", "Framer Motion basics"]
+    },
+    "job_max_salary": 350000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://edugrid.com/jobs"
+  },
+  {
+    "job_id": "be-gl-012",
+    "employer_name": "GoStream",
+    "employer_logo": "https://logo.clearbit.com/netflix.com",
+    "job_title": "Golang Engineer",
+    "job_description": "Optimizing video streaming latency for global audiences.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-03-29T14:00:00.000Z",
+    "job_city": "Remote",
+    "job_country": "US",
+    "job_highlights": {
+      "Qualifications": [
+        "3+ years Go experience",
+        "Kubernetes/Docker",
+        "gRPC knowledge"
+      ]
+    },
+    "job_max_salary": 140000,
+    "job_salary_currency": "USD",
+    "job_apply_link": "https://gostream.io/apply"
+  },
+  {
+    "job_id": "fe-ng-013",
+    "employer_name": "Z-Tech",
+    "employer_logo": "https://logo.clearbit.com/zeplin.io",
+    "job_title": "Vue.js Developer",
+    "job_description": "Building admin dashboards for internal logistics management.",
+    "job_is_remote": false,
+    "job_posted_at_datetime_utc": "2026-03-28T10:20:00.000Z",
+    "job_city": "Lekki",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": ["Vue 3/Pinia", "TypeScript", "Element Plus UI"]
+    },
+    "job_max_salary": 650000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://ztech.ng/work"
+  },
+  {
+    "job_id": "be-ng-014",
+    "employer_name": "NairaFlow",
+    "employer_logo": "https://logo.clearbit.com/monzo.com",
+    "job_title": "Senior Java Developer",
+    "job_description": "Leading the core banking engine redevelopment team.",
+    "job_is_remote": false,
+    "job_posted_at_datetime_utc": "2026-03-27T09:00:00.000Z",
+    "job_city": "Victoria Island",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": [
+        "Java/Spring Boot expert",
+        "Microservices architecture",
+        "PostgreSQL"
+      ]
+    },
+    "job_max_salary": 1800000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://nairaflow.ng/hire"
+  },
+  {
+    "job_id": "ux-ng-015",
+    "employer_name": "DesignHub",
+    "employer_logo": "https://logo.clearbit.com/behance.net",
+    "job_title": "Interaction Designer",
+    "job_description": "Focus on high-fidelity prototyping and user testing for mobile apps.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-03-26T13:00:00.000Z",
+    "job_city": "Remote",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": [
+        "Prototyping in Figma/Protopie",
+        "UX Research",
+        "Basic HTML/CSS knowledge"
+      ]
+    },
+    "job_max_salary": 550000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://designhub.io/join"
+  },
+  {
+    "job_id": "fe-gl-016",
+    "employer_name": "ShopifyClone",
+    "employer_logo": "https://logo.clearbit.com/shopify.com",
+    "job_title": "React Frontend Architect",
+    "job_description": "Defining the frontend standards for our multi-tenant SaaS platform.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-03-25T15:30:00.000Z",
+    "job_city": "Remote",
+    "job_country": "US",
+    "job_highlights": {
+      "Qualifications": [
+        "Expert React/Redux",
+        "Component Library design",
+        "Unit testing (Jest)"
+      ]
+    },
+    "job_max_salary": 160000,
+    "job_salary_currency": "USD",
+    "job_apply_link": "https://sclone.com/jobs"
+  },
+  {
+    "job_id": "be-ng-017",
+    "employer_name": "AgroTech",
+    "employer_logo": "https://logo.clearbit.com/greenhouse.io",
+    "job_title": "Ruby on Rails Dev",
+    "job_description": "Help farmers track inventory and supply chain data in real-time.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-03-24T11:00:00.000Z",
+    "job_city": "Enugu",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": ["Ruby on Rails", "PostgreSQL", "Sidekiq"]
+    },
+    "job_max_salary": 750000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://agrotech.ng/apply"
+  },
+  {
+    "job_id": "mb-gl-018",
+    "employer_name": "SwiftApps",
+    "employer_logo": "https://logo.clearbit.com/apple.com",
+    "job_title": "iOS Developer",
+    "job_description": "Building premium iOS experiences for high-end lifestyle brands.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-03-23T10:00:00.000Z",
+    "job_city": "Remote",
+    "job_country": "CH",
+    "job_highlights": {
+      "Qualifications": [
+        "Swift/SwiftUI",
+        "Combine framework",
+        "App Store deployment"
+      ]
+    },
+    "job_max_salary": 90000,
+    "job_salary_currency": "CHF",
+    "job_apply_link": "https://swiftapps.ch/work"
+  },
+  {
+    "job_id": "ux-gl-019",
+    "employer_name": "Visionary AI",
+    "employer_logo": "https://logo.clearbit.com/openai.com",
+    "job_title": "AI UX Researcher",
+    "job_description": "Studying human interaction with AI models to improve interface design.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-03-22T09:00:00.000Z",
+    "job_city": "Remote",
+    "job_country": "US",
+    "job_highlights": {
+      "Qualifications": [
+        "Masters in HCI or Psych",
+        "UX Research methods",
+        "Basic AI/ML understanding"
+      ]
+    },
+    "job_max_salary": 145000,
+    "job_salary_currency": "USD",
+    "job_apply_link": "https://visionary.ai/jobs"
+  },
+  {
+    "job_id": "fe-ng-020",
+    "employer_name": "PropTech NG",
+    "employer_logo": "https://logo.clearbit.com/zillow.com",
+    "job_title": "Frontend Engineer",
+    "job_description": "Build real-estate listing maps and virtual tour interfaces.",
+    "job_is_remote": false,
+    "job_posted_at_datetime_utc": "2026-03-21T12:00:00.000Z",
+    "job_city": "Port Harcourt",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": ["React/Mapbox", "Tailwind CSS", "Web performance"]
+    },
+    "job_max_salary": 600000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://proptech.ng/hiring"
+  },
+  {
+    "job_id": "be-gl-021",
+    "employer_name": "RustCloud",
+    "employer_logo": "https://logo.clearbit.com/rust-lang.org",
+    "job_title": "Systems Engineer (Rust)",
+    "job_description": "Building memory-safe cloud primitives for next-gen servers.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-03-20T16:00:00.000Z",
+    "job_city": "Remote",
+    "job_country": "SE",
+    "job_highlights": {
+      "Qualifications": [
+        "Strong Rust skills",
+        "Low-level programming",
+        "Distributed systems"
+      ]
+    },
+    "job_max_salary": 120000,
+    "job_salary_currency": "EUR",
+    "job_apply_link": "https://rustcloud.se/jobs"
+  },
+  {
+    "job_id": "mb-ng-022",
+    "employer_name": "TaxiGo",
+    "employer_logo": "https://logo.clearbit.com/uber.com",
+    "job_title": "Android Developer",
+    "job_description": "Maintain and scale our driver-side Android application.",
+    "job_is_remote": false,
+    "job_posted_at_datetime_utc": "2026-03-19T08:30:00.000Z",
+    "job_city": "Lagos",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": [
+        "Kotlin expertise",
+        "Google Maps SDK",
+        "Background services"
+      ]
+    },
+    "job_max_salary": 850000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://taxigo.ng/jobs"
+  },
+  {
+    "job_id": "fe-gl-023",
+    "employer_name": "Financely",
+    "employer_logo": "https://logo.clearbit.com/revolut.com",
+    "job_title": "Senior Frontend Engineer",
+    "job_description": "Building secure, high-stakes financial dashboards.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-03-18T14:00:00.000Z",
+    "job_city": "Remote",
+    "job_country": "UK",
+    "job_highlights": {
+      "Qualifications": [
+        "React/TypeScript",
+        "Chart.js/D3.js",
+        "Cybersecurity mindset"
+      ]
+    },
+    "job_max_salary": 90000,
+    "job_salary_currency": "GBP",
+    "job_apply_link": "https://financely.com/careers"
+  },
+  {
+    "job_id": "be-ng-024",
+    "employer_name": "HealthTrack",
+    "employer_logo": "https://logo.clearbit.com/strava.com",
+    "job_title": "Node.js Developer",
+    "job_description": "Building APIs for remote patient monitoring devices.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-03-17T11:00:00.000Z",
+    "job_city": "Remote",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": [
+        "Node.js/TypeScript",
+        "WebSockets",
+        "HIPAA/Data privacy knowledge"
+      ]
+    },
+    "job_max_salary": 950000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://healthtrack.ng/apply"
+  },
+  {
+    "job_id": "ux-ng-025",
+    "employer_name": "BrandBoost",
+    "employer_logo": "https://logo.clearbit.com/canva.com",
+    "job_title": "Junior UI Designer",
+    "job_description": "Helping brands create visual identities for their digital presence.",
+    "job_is_remote": false,
+    "job_posted_at_datetime_utc": "2026-03-16T10:00:00.000Z",
+    "job_city": "Lagos",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": ["Figma", "Color theory", "Typography"]
+    },
+    "job_max_salary": 300000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://brandboost.ng/hire"
+  },
+  {
+    "job_id": "fe-ng-026",
+    "employer_name": "StoreFront",
+    "employer_logo": "https://logo.clearbit.com/wix.com",
+    "job_title": "React Developer",
+    "job_description": "Building custom e-commerce storefronts for SME businesses.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-03-15T09:00:00.000Z",
+    "job_city": "Remote",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": ["React/Redux", "Tailwind CSS", "API integration"]
+    },
+    "job_max_salary": 400000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://storefront.ng/jobs"
+  },
+  {
+    "job_id": "be-gl-027",
+    "employer_name": "StableStack",
+    "employer_logo": "https://logo.clearbit.com/docker.com",
+    "job_title": "Senior DevOps Engineer",
+    "job_description": "Automating deployments and managing high-availability clusters.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-03-14T15:00:00.000Z",
+    "job_city": "Remote",
+    "job_country": "NL",
+    "job_highlights": {
+      "Qualifications": ["Kubernetes", "Terraform", "CI/CD expert"]
+    },
+    "job_max_salary": 105000,
+    "job_salary_currency": "EUR",
+    "job_apply_link": "https://stablestack.io/jobs"
+  },
+  {
+    "job_id": "mb-ng-028",
+    "employer_name": "RideShare",
+    "employer_logo": "https://logo.clearbit.com/bolt.eu",
+    "job_title": "React Native Junior",
+    "job_description": "Supporting the mobile team in UI updates and bug fixes.",
+    "job_is_remote": false,
+    "job_posted_at_datetime_utc": "2026-03-13T12:00:00.000Z",
+    "job_city": "Lagos",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": [
+        "React Native basics",
+        "JavaScript",
+        "Eagerness to learn"
+      ]
+    },
+    "job_max_salary": 400000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://rideshare.ng/careers"
+  },
+  {
+    "job_id": "ux-gl-029",
+    "employer_name": "GameUI Studio",
+    "employer_logo": "https://logo.clearbit.com/unity.com",
+    "job_title": "Game UI Designer",
+    "job_description": "Designing intuitive menus and HUD elements for mobile RPGs.",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-03-12T10:00:00.000Z",
+    "job_city": "Remote",
+    "job_country": "KR",
+    "job_highlights": {
+      "Qualifications": [
+        "Experience in Game UI",
+        "Unity/Unreal basics",
+        "Strong visual design"
+      ]
+    },
+    "job_max_salary": 85000,
+    "job_salary_currency": "USD",
+    "job_apply_link": "https://gameui.kr/apply"
+  },
+  {
+    "job_id": "be-ng-030",
+    "employer_name": "QuickPay",
+    "employer_logo": "https://logo.clearbit.com/paystack.com",
+    "job_title": "Backend API Dev",
+    "job_description": "Building fast, reliable payment APIs for small businesses.",
+    "job_is_remote": false,
+    "job_posted_at_datetime_utc": "2026-03-11T09:00:00.000Z",
+    "job_city": "Lagos",
+    "job_country": "NG",
+    "job_highlights": {
+      "Qualifications": ["Node.js/Express", "PostgreSQL", "Redis"]
+    },
+    "job_max_salary": 750000,
+    "job_salary_currency": "NGN",
+    "job_apply_link": "https://quickpay.ng/jobs"
+  }
+]
