@@ -48,7 +48,7 @@ export default function CreateProfile() {
             </p>
             <input
               type='text'
-              className='bg-bg-primary focus:ring-theme h-10 w-full rounded-lg p-3 focus:ring-1 focus:outline-0'
+              className='bg-bg-primary focus:ring-theme h-10 w-full rounded-lg p-3 transition-colors focus:ring-1 focus:outline-0'
               placeholder='e.g., Yusuf Oyinlola'
               value={fullName}
               onChange={e => setFullName(e.target.value)}
@@ -57,7 +57,7 @@ export default function CreateProfile() {
           <label className='flex flex-col gap-1.5'>
             <p className='text-sm md:text-base'>Professional Bio</p>
             <textarea
-              className='bg-bg-primary focus:ring-theme w-full rounded-lg p-3 focus:ring-1 focus:outline-0'
+              className='bg-bg-primary focus:ring-theme w-full rounded-lg p-3 transition-colors focus:ring-1 focus:outline-0'
               placeholder='Tell us about your experience...'
               rows={4}
               value={profBio}
@@ -68,7 +68,7 @@ export default function CreateProfile() {
             <p className='text-sm md:text-base'>Technical Skills</p>
             <input
               type='text'
-              className='bg-bg-primary focus:ring-theme h-12.5 w-full rounded-lg p-3 focus:ring-1 focus:outline-0'
+              className='bg-bg-primary focus:ring-theme h-12.5 w-full rounded-lg p-3 transition-colors focus:ring-1 focus:outline-0'
               placeholder='Type a skill and press Enter...'
               value={skillValue}
               onChange={e => setSkillValue(e.target.value)}
