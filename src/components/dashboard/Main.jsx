@@ -1,9 +1,11 @@
-import LeftColumn from './LeftColumn';
+import LeftPanel from './LeftPanel';
+import RightPanel from './RightPanel';
 
 export default function Main() {
   return (
     <main className='grid lg:grid-cols-12'>
-      <LeftColumn />
+      <LeftPanel />
+      <RightPanel />
     </main>
   );
 }

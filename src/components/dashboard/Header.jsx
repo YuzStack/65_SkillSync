@@ -2,7 +2,7 @@ import { UserRoundPen } from 'lucide-react';
 
 export default function Header() {
   return (
-    <header className='sticky top-0 z-10 h-16 border-b border-neutral-800'>
+    <header className='bg-bg-primary sticky top-0 z-10 h-16 border-b border-neutral-800'>
       <div className='flex h-full items-center justify-between px-3 lg:px-6'>
         <div className='flex items-center gap-2'>
           <img
