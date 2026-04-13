@@ -1,6 +1,6 @@
 import { UserRoundPen } from 'lucide-react';
 
-export default function Header() {
+export default function Header({ setShowEditProfile }) {
   return (
     <header className='bg-bg-primary sticky top-0 z-10 h-16 border-b border-neutral-800'>
       <div className='flex h-full items-center justify-between px-3 lg:px-6'>
@@ -12,9 +12,12 @@ export default function Header() {
           />
           <p className='text-lg font-bold lg:text-xl'>SkillSync</p>
         </div>
-        <div className='flex size-8 items-center justify-center rounded-full border border-neutral-800 bg-neutral-900'>
+        <button
+          className='rounded-full border border-neutral-800 bg-neutral-900 p-2'
+          onClick={() => setShowEditProfile(true)}
+        >
           <UserRoundPen className='text-paragraph size-5 transition-colors hover:text-white' />
-        </div>
+        </button>
       </div>
     </header>
   );
