@@ -1,5 +1,7 @@
 import { X } from 'lucide-react';
 import { useState } from 'react';
+import { useUser } from '../contexts/UserContext';
+import { useNavigate } from 'react-router';
 
 export default function CreateProfile() {
   const [fullName, setFullName] = useState('');
@@ -7,6 +9,9 @@ export default function CreateProfile() {
 
   const [skillValue, setSkillValue] = useState('');
   const [skills, setSkills] = useState([]);
+
+  const { dispatch } = useUser();
+  const navigate = useNavigate();
 
   function handleAddSkill(e) {
     if (e.key !== 'Enter') return;
@@ -25,6 +30,15 @@ export default function CreateProfile() {
     setSkills(skills.filter(s => s !== skill));
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const newUser = { fullName, profBio, skills };
+
+    dispatch({ type: 'user/createProfile', payload: newUser });
+    navigate('/dashboard');
+  }
+
   return (
     <div className='flex min-h-screen items-center justify-center'>
       <div className='border border-neutral-800 bg-neutral-900 md:w-lg md:rounded-2xl lg:rounded-3xl'>
@@ -41,7 +55,7 @@ export default function CreateProfile() {
             Setup your profile to get personalized job matches
           </p>
         </header>
-        <form className='space-y-6 p-6'>
+        <form className='space-y-6 p-6' onSubmit={handleSubmit}>
           <label className='flex flex-col gap-1.5'>
             <p className='text-sm md:text-base'>
               Full Name <span className='text-red-400'>*</span>
@@ -52,6 +66,7 @@ export default function CreateProfile() {
               placeholder='e.g., Yusuf Oyinlola'
               value={fullName}
               onChange={e => setFullName(e.target.value)}
+              required
             />
           </label>
           <label className='flex flex-col gap-1.5'>
