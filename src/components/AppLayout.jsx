@@ -1,10 +1,13 @@
 import { Outlet } from 'react-router';
 import { UserProvider } from '../contexts/UserContext';
+import { JobsProvider } from '../contexts/JobsContext';
 
 export default function AppLayout() {
   return (
-    <UserProvider>
-      <Outlet />
-    </UserProvider>
+    <JobsProvider>
+      <UserProvider>
+        <Outlet />
+      </UserProvider>
+    </JobsProvider>
   );
 }

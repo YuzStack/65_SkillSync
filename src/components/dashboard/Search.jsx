@@ -1,8 +1,28 @@
 import { SlidersHorizontal } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useJobs } from '../../contexts/JobsContext';
 
 export default function Search() {
   const [searchQuery, setSearchQuery] = useState('');
+  const { getJobs } = useJobs();
+
+  useEffect(
+    function () {
+      if (!searchQuery.trim()) {
+        getJobs('');
+        return;
+      }
+
+      if (searchQuery.length < 3) return;
+
+      const timer = setTimeout(function () {
+        getJobs(searchQuery);
+      }, 500);
+
+      return () => clearTimeout(timer);
+    },
+    [searchQuery, getJobs],
+  );
 
   return (
     <div className='border-b border-neutral-800 p-4'>

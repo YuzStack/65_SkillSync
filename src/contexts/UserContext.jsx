@@ -9,7 +9,7 @@ const initialState = {
   skills: [],
 };
 
-function reducer(curState, action) {
+function reducer(_, action) {
   switch (action.type) {
     case 'user/createProfile':
     case 'user/EditProfile':
