@@ -8,7 +8,7 @@ export default function LeftPanel() {
       <NavJobs />
       <Search />
 
-      <div className='flex-1 overflow-y-scroll'>
+      <div className='flex-1 overflow-scroll'>
         <Jobs />
       </div>
     </div>

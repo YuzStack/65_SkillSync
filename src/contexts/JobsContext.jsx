@@ -6,7 +6,7 @@ const initialState = {
   jobs: [],
   activeJob: null,
   savedJobs: [],
-  isLoading: true,
+  isLoading: false,
   error: '',
 };
 
@@ -47,26 +47,48 @@ function JobsProvider({ children }) {
       return;
     }
 
+    const options = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-rapidapi-key': import.meta.env.VITE_RAPID_API_KEY,
+        'x-rapidapi-host': import.meta.env.VITE_RAPID_API_HOST,
+      },
+    };
+
     dispatch({ type: 'loading' });
     try {
       const response = await fetch(
-        `http://localhost:8000/jobs?q=${searchQuery}`,
+        `https://jsearch.p.rapidapi.com/search?query=${searchQuery}&num_pages=1`,
+        options,
       );
-      if (!response.ok)
-        throw new Error('Something went wrong with fetching movies');
 
-      const data = await response.json();
+      if (!response.ok)
+        throw new Error('Something went wrong with fetching jobs');
+
+      const { data } = await response.json();
       console.log(data);
 
-      // dispatch({ type: 'jobs/loaded', payload: data });
+      const transformedData = data.map(datum => ({
+        jobId: datum.job_id,
+        employerLogo: datum.employer_logo,
+        jobTitle: datum.job_title,
+        employerName: datum.employer_name,
+        isRemote: datum.job_is_remote,
+        jobLocation: datum.job_location,
+        isSaved: false,
+      }));
+
+      dispatch({ type: 'jobs/loaded', payload: transformedData || [] });
     } catch (error) {
       console.error(`${error.message} 🙌🙌`);
-      // dispatch({ type: 'rejected' });
+      dispatch({ type: 'rejected', payload: error.message });
     }
   }, []);
 
   const getJob = useCallback(async function (jobId) {
     dispatch({ type: 'loading' });
+
     try {
       const response = await fetch(`http://localhost:8000/jobs/${jobId}`);
       if (!response.ok)

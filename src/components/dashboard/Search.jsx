@@ -17,7 +17,7 @@ export default function Search() {
 
       const timer = setTimeout(function () {
         getJobs(searchQuery);
-      }, 500);
+      }, 1000);
 
       return () => clearTimeout(timer);
     },
@@ -38,7 +38,7 @@ export default function Search() {
           <SlidersHorizontal className='size-6' />
         </div>
       </div>
-      <p className='text-paragraph mt-2 text-xs lg:text-sm'>3 roles</p>
+      {/* <p className='text-paragraph mt-2 text-xs lg:text-sm'>3 roles</p> */}
     </div>
   );
 }
