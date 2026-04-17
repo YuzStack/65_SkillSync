@@ -16,8 +16,15 @@ function reducer(curState, action) {
       return { ...curState, isLoading: true };
     case 'jobs/loaded':
       return { ...curState, jobs: action.payload, isLoading: false };
-    case 'job/loaded':
-      return { ...curState, activeJob: action.payload, isLoading: false };
+    case 'jobs/clear':
+      return { ...curState, jobs: [], activeJob: null, error: '' };
+    case 'job/setActive': {
+      const newjobs = curState.jobs.map(job => ({
+        ...job,
+        isActive: job.jobId === action.payload.jobId ? true : false,
+      }));
+      return { ...curState, activeJob: action.payload, jobs: newjobs };
+    }
     case 'job/save':
       return {
         ...curState,
@@ -42,10 +49,7 @@ function JobsProvider({ children }) {
     useReducer(reducer, initialState);
 
   const getJobs = useCallback(async function (searchQuery) {
-    if (!searchQuery) {
-      dispatch({ type: 'jobs/loaded', payload: [] });
-      return;
-    }
+    dispatch({ type: 'loading' });
 
     const options = {
       method: 'GET',
@@ -56,7 +60,6 @@ function JobsProvider({ children }) {
       },
     };
 
-    dispatch({ type: 'loading' });
     try {
       const response = await fetch(
         `https://jsearch.p.rapidapi.com/search?query=${searchQuery}&num_pages=1`,
@@ -73,10 +76,17 @@ function JobsProvider({ children }) {
         jobId: datum.job_id,
         employerLogo: datum.employer_logo,
         jobTitle: datum.job_title,
+        applyLink: datum.job_apply_link,
         employerName: datum.employer_name,
         isRemote: datum.job_is_remote,
         jobLocation: datum.job_location,
+        postedAt: datum.job_posted_at,
+        employmentType: datum.job_employment_type,
+        salary: datum.job_salary_string,
+        jobDescription: datum.job_description,
+        jobRoles: datum.job_highlights.Responsibilities,
         isSaved: false,
+        isActive: false,
       }));
 
       dispatch({ type: 'jobs/loaded', payload: transformedData || [] });
@@ -86,23 +96,10 @@ function JobsProvider({ children }) {
     }
   }, []);
 
-  const getJob = useCallback(async function (jobId) {
-    dispatch({ type: 'loading' });
-
-    try {
-      const response = await fetch(`http://localhost:8000/jobs/${jobId}`);
-      if (!response.ok)
-        throw new Error('Something went wrong with fetching movies');
-
-      const data = await response.json();
-      console.log(data);
-
-      // dispatch({ type: 'job/loaded', payload: data });
-    } catch (error) {
-      console.error(`${error.message} 🙌🙌`);
-      // dispatch({ type: 'rejected' });
-    }
-  }, []);
+  function getJob(id) {
+    const activeJob = jobs.find(job => job.jobId === id);
+    dispatch({ type: 'job/setActive', payload: activeJob });
+  }
 
   return (
     <JobsContext.Provider

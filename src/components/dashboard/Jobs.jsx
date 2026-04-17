@@ -4,7 +4,7 @@ import Message from '../Message';
 import Loader from '../Loader';
 
 export default function Jobs() {
-  const { jobs, isLoading, error } = useJobs();
+  const { jobs, isLoading, error, getJob, activeJob } = useJobs();
 
   if (error) return <Message text={error} />;
 
@@ -17,8 +17,9 @@ export default function Jobs() {
     <ul className='space-y-4 p-5'>
       {jobs.map(job => (
         <li
-          className='hover:bg-theme/20 hover:border-l-theme flex h-20 cursor-pointer items-center justify-between gap-2 rounded-xl border border-neutral-800 bg-neutral-900 p-4 transition-all hover:scale-102 hover:border-l-2'
+          className={`hover:bg-theme/20 hover:border-l-theme flex h-20 cursor-pointer items-center justify-between gap-2 rounded-xl border border-neutral-800 bg-neutral-900 p-4 transition-all hover:scale-102 hover:border-l-2 ${activeJob && activeJob.jobId === job.jobId ? 'bg-theme/20 border-l-theme scale-102 border-l-2' : ''}`}
           key={job.jobId}
+          onClick={() => getJob(job.jobId)}
         >
           <div className='flex gap-4'>
             <div className='flex size-12.5 items-center justify-center overflow-hidden rounded-full bg-blue-500'>

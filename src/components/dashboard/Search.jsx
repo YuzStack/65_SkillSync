@@ -4,12 +4,12 @@ import { useJobs } from '../../contexts/JobsContext';
 
 export default function Search() {
   const [searchQuery, setSearchQuery] = useState('');
-  const { getJobs } = useJobs();
+  const { getJobs, dispatch, jobs } = useJobs();
 
   useEffect(
     function () {
       if (!searchQuery.trim()) {
-        getJobs('');
+        dispatch({ type: 'jobs/clear' });
         return;
       }
 
@@ -21,7 +21,7 @@ export default function Search() {
 
       return () => clearTimeout(timer);
     },
-    [searchQuery, getJobs],
+    [searchQuery, getJobs, dispatch],
   );
 
   return (
@@ -38,7 +38,11 @@ export default function Search() {
           <SlidersHorizontal className='size-6' />
         </div>
       </div>
-      {/* <p className='text-paragraph mt-2 text-xs lg:text-sm'>3 roles</p> */}
+      {jobs.length > 0 && (
+        <p className='text-paragraph mt-2 text-xs lg:text-sm'>
+          {jobs.length} roles
+        </p>
+      )}
     </div>
   );
 }
