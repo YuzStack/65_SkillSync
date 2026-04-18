@@ -1,12 +1,15 @@
 import { X } from 'lucide-react';
 import { useState } from 'react';
+import { useUser } from '../../contexts/UserContext';
 
 export default function EditProfile({ setShowEditProfile }) {
-  const [fullName, setFullName] = useState('');
-  const [profBio, setProfBio] = useState('');
+  const { user, dispatch } = useUser();
+
+  const [fullName, setFullName] = useState(user.fullName);
+  const [profBio, setProfBio] = useState(user.profBio);
 
   const [skillValue, setSkillValue] = useState('');
-  const [skills, setSkills] = useState([]);
+  const [skills, setSkills] = useState(user.skills);
 
   function handleAddSkill(e) {
     if (e.key !== 'Enter') return;
@@ -25,6 +28,15 @@ export default function EditProfile({ setShowEditProfile }) {
     setSkills(skills.filter(s => s !== skill));
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const newUser = { fullName, profBio, skills };
+
+    dispatch({ type: 'user/editProfile', payload: newUser });
+    setShowEditProfile(false);
+  }
+
   return (
     <div className='absolute inset-0 z-20 flex min-h-screen items-center justify-center bg-black/30 backdrop-blur-xs'>
       <div className='border border-neutral-800 bg-neutral-900 sm:size-fit md:w-lg md:rounded-2xl lg:rounded-3xl'>
@@ -41,7 +53,7 @@ export default function EditProfile({ setShowEditProfile }) {
             </button>
           </div>
         </header>
-        <form className='space-y-6 p-6'>
+        <form className='space-y-6 p-6' onSubmit={handleSubmit}>
           <label className='flex flex-col gap-1.5'>
             <p className='text-sm md:text-base'>Full Name</p>
             <input

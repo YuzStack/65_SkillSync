@@ -12,7 +12,7 @@ const initialState = {
 function reducer(_, action) {
   switch (action.type) {
     case 'user/createProfile':
-    case 'user/EditProfile':
+    case 'user/editProfile':
       return action.payload;
     default:
       throw new Error('Uknown action type');

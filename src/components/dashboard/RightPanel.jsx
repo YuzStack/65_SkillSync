@@ -74,7 +74,7 @@ export default function RightPanel() {
         <h2 className='mb-3 text-lg font-semibold lg:text-xl'>
           About the Role
         </h2>
-        <p className='text-paragraph whitespace-pre-line lg:max-w-3xl lg:text-lg'>
+        <p className='whitespace-pre-line text-white lg:max-w-3xl lg:text-lg'>
           {activeJob.jobDescription}
         </p>
       </div>

@@ -2,7 +2,7 @@ import { SlidersHorizontal } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useJobs } from '../../contexts/JobsContext';
 
-export default function Search() {
+export default function SearchJobs() {
   const [searchQuery, setSearchQuery] = useState('');
   const { getJobs, dispatch, jobs } = useJobs();
 
@@ -38,11 +38,10 @@ export default function Search() {
           <SlidersHorizontal className='size-6' />
         </div>
       </div>
-      {jobs.length > 0 && (
-        <p className='text-paragraph mt-2 text-xs lg:text-sm'>
-          {jobs.length} roles
-        </p>
-      )}
+
+      <p className='text-paragraph mt-2 text-xs lg:text-sm'>
+        {jobs.length} roles
+      </p>
     </div>
   );
 }

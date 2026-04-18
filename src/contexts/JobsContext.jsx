@@ -19,11 +19,30 @@ function reducer(curState, action) {
     case 'jobs/clear':
       return { ...curState, jobs: [], activeJob: null, error: '' };
     case 'job/setActive': {
-      const newjobs = curState.jobs.map(job => ({
+      const activeJob = curState.jobs.find(job => job.jobId === action.payload);
+      const newJobs = curState.jobs.map(job => ({
         ...job,
-        isActive: job.jobId === action.payload.jobId ? true : false,
+        isActive: job.jobId === activeJob.jobId ? true : false,
       }));
-      return { ...curState, activeJob: action.payload, jobs: newjobs };
+
+      return { ...curState, activeJob, jobs: newJobs };
+    }
+    case 'savedJob/setActive': {
+      const activeJob = curState.savedJobs.find(
+        job => job.jobId === action.payload,
+      );
+
+      const newSavedJobs = curState.jobs.map(job => ({
+        ...job,
+        isActive: job.jobId === activeJob.jobId ? true : false,
+      }));
+
+      const newJobs = curState.jobs.map(job => ({
+        ...job,
+        isActive: job.jobId === activeJob.jobId ? true : false,
+      }));
+
+      return { ...curState, activeJob, savedJobs: newSavedJobs, jobs: newJobs };
     }
     case 'job/save':
       return {
@@ -96,11 +115,6 @@ function JobsProvider({ children }) {
     }
   }, []);
 
-  function getJob(id) {
-    const activeJob = jobs.find(job => job.jobId === id);
-    dispatch({ type: 'job/setActive', payload: activeJob });
-  }
-
   return (
     <JobsContext.Provider
       value={{
@@ -110,7 +124,6 @@ function JobsProvider({ children }) {
         isLoading,
         error,
         getJobs,
-        getJob,
         dispatch,
       }}
     >
