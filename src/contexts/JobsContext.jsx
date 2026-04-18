@@ -1,4 +1,11 @@
-import { createContext, useCallback, useContext, useReducer } from 'react';
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useReducer,
+} from 'react';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 const JobsContext = createContext();
 
@@ -27,12 +34,25 @@ function reducer(curState, action) {
 
       return { ...curState, activeJob, jobs: newJobs };
     }
+    case 'job/save':
+      return {
+        ...curState,
+        savedJobs: [...curState.savedJobs, action.payload],
+      };
+    case 'job/unsave':
+      return {
+        ...curState,
+        savedJobs: curState.savedJobs.filter(
+          job => job.jobId !== action.payload,
+        ),
+      };
+
     case 'savedJob/setActive': {
       const activeJob = curState.savedJobs.find(
         job => job.jobId === action.payload,
       );
 
-      const newSavedJobs = curState.jobs.map(job => ({
+      const newSavedJobs = curState.savedJobs.map(job => ({
         ...job,
         isActive: job.jobId === activeJob.jobId ? true : false,
       }));
@@ -44,18 +64,6 @@ function reducer(curState, action) {
 
       return { ...curState, activeJob, savedJobs: newSavedJobs, jobs: newJobs };
     }
-    case 'job/save':
-      return {
-        ...curState,
-        savedJobs: [...curState.savedJobs, action.payload],
-      };
-    case 'job/unsave':
-      return {
-        ...curState,
-        savedJobs: curState.savedJobs.filter(
-          job => job.job_id !== action.payload,
-        ),
-      };
     case 'rejected':
       return { ...curState, error: action.payload, isLoading: false };
     default:
@@ -64,8 +72,20 @@ function reducer(curState, action) {
 }
 
 function JobsProvider({ children }) {
+  const [storedSavedJobs, setStoredSavedJobs] = useLocalStorage(
+    [],
+    'skillSync_savedJobs',
+  );
+
   const [{ jobs, activeJob, savedJobs, isLoading, error }, dispatch] =
-    useReducer(reducer, initialState);
+    useReducer(reducer, { ...initialState, savedJobs: storedSavedJobs });
+
+  useEffect(
+    function () {
+      setStoredSavedJobs(savedJobs);
+    },
+    [savedJobs, setStoredSavedJobs],
+  );
 
   const getJobs = useCallback(async function (searchQuery) {
     dispatch({ type: 'loading' });

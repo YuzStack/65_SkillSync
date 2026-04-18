@@ -13,7 +13,7 @@ import Message from '../Message';
 import Loader from '../Loader';
 
 export default function RightPanel() {
-  const { activeJob } = useJobs();
+  const { activeJob, dispatch, savedJobs } = useJobs();
 
   if (!activeJob)
     return (
@@ -22,15 +22,32 @@ export default function RightPanel() {
       </div>
     );
 
+  const isSaved = savedJobs.some(job => job.jobId === activeJob.jobId);
+
   return (
     <div className='min-h-[calc(100vh-64px)] p-6 lg:col-span-8'>
       <div className='flex items-center justify-between'>
         <h2 className='text-2xl font-bold lg:text-3xl'>{activeJob.jobTitle}</h2>
         <div className='flex items-center gap-3'>
-          <button className='flex items-center gap-2 rounded-lg border border-neutral-800 bg-neutral-900 p-2 px-3 text-sm'>
-            <Bookmark className='size-5' />
-            <p>Save Job</p>
-          </button>
+          {isSaved ? (
+            <button
+              className='flex items-center gap-2 rounded-lg border border-neutral-800 bg-neutral-900 p-2 px-3 text-sm'
+              onClick={() =>
+                dispatch({ type: 'job/unsave', payload: activeJob.jobId })
+              }
+            >
+              <i className='fa-solid fa-bookmark text-theme text-lg'></i>
+              <p>Save Job</p>
+            </button>
+          ) : (
+            <button
+              className='flex items-center gap-2 rounded-lg border border-neutral-800 bg-neutral-900 p-2 px-3 text-sm'
+              onClick={() => dispatch({ type: 'job/save', payload: activeJob })}
+            >
+              <i className='fa-regular fa-bookmark text-lg'></i>
+              <p>Save Job</p>
+            </button>
+          )}
           <button className='bg-theme hover:bg-theme/80 rounded-lg p-2 px-3 text-sm transition-all hover:scale-102'>
             <a href={activeJob.applyLink} target='_blank'>
               Apply Now

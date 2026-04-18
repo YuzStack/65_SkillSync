@@ -4,7 +4,7 @@ import Message from '../Message';
 import Loader from '../Loader';
 
 export default function Jobs() {
-  const { jobs, isLoading, error, dispatch, activeJob } = useJobs();
+  const { jobs, isLoading, error, dispatch, activeJob, savedJobs } = useJobs();
 
   if (error) return <Message text={error} />;
 
@@ -51,7 +51,25 @@ export default function Jobs() {
             </div>
           </div>
           <div>
-            <Bookmark className='text-paragraph size-6' />
+            {savedJobs.some(j => j.jobId === job.jobId) ? (
+              <button
+                onClick={e => {
+                  e.stopPropagation();
+                  dispatch({ type: 'job/unsave', payload: job.jobId });
+                }}
+              >
+                <i className='fa-solid fa-bookmark text-theme text-xl'></i>
+              </button>
+            ) : (
+              <button
+                onClick={e => {
+                  e.stopPropagation();
+                  dispatch({ type: 'job/save', payload: job });
+                }}
+              >
+                <i className='fa-regular fa-bookmark text-xl'></i>
+              </button>
+            )}
           </div>
         </li>
       ))}
