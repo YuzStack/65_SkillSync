@@ -55,7 +55,25 @@ export default function SavedJobs() {
             </div>
           </div>
           <div>
-            <Bookmark className='text-paragraph size-6' />
+            {savedJobs.some(j => j.jobId === job.jobId) ? (
+              <button
+                onClick={e => {
+                  e.stopPropagation();
+                  dispatch({ type: 'job/unsave', payload: job.jobId });
+                }}
+              >
+                <i className='fa-solid fa-bookmark text-theme text-xl'></i>
+              </button>
+            ) : (
+              <button
+                onClick={e => {
+                  e.stopPropagation();
+                  dispatch({ type: 'job/save', payload: job });
+                }}
+              >
+                <i className='fa-regular fa-bookmark text-xl'></i>
+              </button>
+            )}
           </div>
         </li>
       ))}
