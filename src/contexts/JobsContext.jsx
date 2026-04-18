@@ -89,7 +89,6 @@ function JobsProvider({ children }) {
         throw new Error('Something went wrong with fetching jobs');
 
       const { data } = await response.json();
-      console.log(data);
 
       const transformedData = data.map(datum => ({
         jobId: datum.job_id,
