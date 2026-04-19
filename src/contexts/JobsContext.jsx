@@ -128,7 +128,6 @@ function JobsProvider({ children }) {
 
       dispatch({ type: 'jobs/loaded', payload: transformedData || [] });
     } catch (error) {
-      console.error(`${error.message} 🙌🙌`);
       dispatch({ type: 'rejected', payload: error.message });
     }
   }, []);
