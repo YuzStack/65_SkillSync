@@ -17,14 +17,14 @@ export default function Jobs() {
     <ul className='space-y-4 p-5'>
       {jobs.map(job => (
         <li
-          className={`hover:bg-theme/20 hover:border-l-theme flex h-20 cursor-pointer items-center justify-between gap-2 rounded-xl border border-neutral-800 bg-neutral-900 p-4 transition-all hover:scale-102 hover:border-l-2 ${activeJob && activeJob.jobId === job.jobId ? 'bg-theme/20 border-l-theme scale-102 border-l-2' : ''}`}
+          className={`hover:bg-theme/20 hover:border-l-theme flex h-20 cursor-pointer items-center justify-between gap-2 overflow-auto rounded-xl border border-neutral-800 bg-neutral-900 p-4 transition-all hover:scale-102 hover:border-l-2 ${activeJob && activeJob.jobId === job.jobId ? 'bg-theme/20 border-l-theme scale-102 border-l-2' : ''}`}
           key={job.jobId}
           onClick={() => {
             dispatch({ type: 'job/setActive', payload: job.jobId });
           }}
         >
-          <div className='flex gap-4'>
-            <div className='flex size-12.5 items-center justify-center overflow-hidden rounded-full bg-blue-500'>
+          <div className='flex items-center gap-4'>
+            <div className='flex size-10 items-center justify-center overflow-hidden rounded-full bg-blue-500 sm:size-12.5'>
               {job.employerLogo ? (
                 <img
                   src={job.employerLogo}
@@ -50,7 +50,7 @@ export default function Jobs() {
               </div>
             </div>
           </div>
-          <div>
+          <div className='hidden sm:block'>
             {savedJobs.some(j => j.jobId === job.jobId) ? (
               <button
                 onClick={e => {

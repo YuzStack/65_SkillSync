@@ -38,8 +38,8 @@ export default function EditProfile({ setShowEditProfile }) {
   }
 
   return (
-    <div className='absolute inset-0 z-20 flex min-h-screen justify-center bg-black/30 backdrop-blur-xs lg:py-12'>
-      <div className='border border-neutral-800 bg-neutral-900 sm:size-fit md:w-lg md:rounded-2xl lg:rounded-3xl'>
+    <div className='absolute inset-0 z-20 flex min-h-screen justify-center bg-black/30 backdrop-blur-xs sm:py-12'>
+      <div className='h-screen w-screen border border-neutral-800 bg-neutral-900 sm:h-fit sm:w-md sm:rounded-xl md:w-lg md:rounded-2xl lg:rounded-3xl'>
         <header className='flex items-center justify-between gap-2 border-b border-neutral-800 px-3 py-5'>
           <h1 className='text-headline mt-1 text-xl font-semibold md:text-2xl'>
             Profile Settings
