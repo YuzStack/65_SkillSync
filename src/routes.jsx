@@ -13,7 +13,7 @@ const routes = [
     children: [
       // Public Route
       {
-        path: 'create-profile',
+        path: '/create-profile',
         element: <CreateProfile />,
       },
 
@@ -22,7 +22,7 @@ const routes = [
         element: <ProfileGuard />,
         children: [
           {
-            path: 'dashboard',
+            path: '/dashboard',
             element: <Dashboard />,
             children: [
               { path: 'all-jobs', element: <AllJobs /> },

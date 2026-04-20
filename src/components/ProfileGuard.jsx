@@ -6,5 +6,5 @@ export default function ProfileGuard() {
 
   const hasProfile = user.fullName.trim() !== '';
 
-  return hasProfile ? <Outlet /> : <Navigate to='create-profile' replace />;
+  return hasProfile ? <Outlet /> : <Navigate to='/create-profile' replace />;
 }
