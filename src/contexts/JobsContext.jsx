@@ -13,6 +13,10 @@ const initialState = {
   jobs: [],
   activeJob: null,
   savedJobs: [],
+  filters: {
+    jobType: 'all', // 'full-time', 'contract'
+    location: 'all', // remote
+  },
   isLoading: false,
   error: '',
 };
@@ -63,6 +67,13 @@ function reducer(curState, action) {
 
       return { ...curState, activeJob, savedJobs: newSavedJobs, jobs: newJobs };
     }
+    case 'filters/update':
+      return {
+        ...curState,
+        filters: { ...curState.filters, ...action.payload },
+      };
+    case 'filters/clear':
+      return { ...curState, filters: { ...initialState.filters } };
     case 'rejected':
       return { ...curState, error: action.payload, isLoading: false };
     default:
@@ -76,8 +87,20 @@ function JobsProvider({ children }) {
     'skillSync_savedJobs',
   );
 
-  const [{ jobs, activeJob, savedJobs, isLoading, error }, dispatch] =
+  const [{ jobs, activeJob, savedJobs, filters, isLoading, error }, dispatch] =
     useReducer(reducer, { ...initialState, savedJobs: storedSavedJobs });
+
+  const filteredJobs = jobs.filter(job => {
+    const matchesType =
+      filters.jobType === 'all' ||
+      job.employmentType.toLowerCase() === filters.jobType;
+
+    const matchesLocation =
+      filters.location === 'all' ||
+      (filters.location === 'remote' && job.isRemote);
+
+    return matchesType && matchesLocation;
+  });
 
   useEffect(
     function () {
@@ -135,9 +158,11 @@ function JobsProvider({ children }) {
   return (
     <JobsContext.Provider
       value={{
-        jobs,
+        jobs: filteredJobs,
+        allJobs: jobs,
         activeJob,
         savedJobs,
+        filters,
         isLoading,
         error,
         getJobs,
