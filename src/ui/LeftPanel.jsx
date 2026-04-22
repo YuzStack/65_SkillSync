@@ -1,8 +1,6 @@
-import Jobs from './Jobs';
-import NavJobs from './NavJobs';
-import SavedJobs from './SavedJobs';
 import { Outlet } from 'react-router';
-import SearchJobs from './SearchJobs';
+import SearchJobs from '../jobs/SearchJobs';
+import NavJobs from '../jobs/NavJobs';
 
 export default function LeftPanel() {
   return (

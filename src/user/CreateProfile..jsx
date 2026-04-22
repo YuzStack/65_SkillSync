@@ -1,6 +1,6 @@
 import { X } from 'lucide-react';
 import { useState } from 'react';
-import { useUser } from '../contexts/UserContext';
+import { useUser } from '../user/UserContext';
 import { useNavigate } from 'react-router';
 
 export default function CreateProfile() {

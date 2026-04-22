@@ -1,7 +1,7 @@
 import { Navigate, Outlet } from 'react-router';
-import { useUser } from '../contexts/UserContext';
+import { useUser } from '../user/UserContext';
 
-export default function ProfileGuard() {
+export default function DashboardGuard() {
   const { user } = useUser();
 
   const hasProfile = user.fullName.trim() !== '';

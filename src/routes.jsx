@@ -1,10 +1,10 @@
 import { Navigate } from 'react-router';
-import AppLayout from './components/AppLayout';
-import CreateProfile from './components/CreateProfile.';
-import Dashboard from './components/dashboard/Dashboard';
-import ProfileGuard from './components/ProfileGuard';
-import AllJobs from './components/dashboard/AllJobs';
-import SavedJobs from './components/dashboard/SavedJobs';
+import AppLayout from './ui/AppLayout';
+import DashboardGuard from './ui/DashboardGuard';
+import Dashboard from './ui/Dashboard';
+import AllJobs from './jobs/AllJobs';
+import CreateProfile from './user/CreateProfile.';
+import SavedJobs from './jobs/SavedJobs';
 
 const routes = [
   {
@@ -19,7 +19,7 @@ const routes = [
 
       // Protected Routes
       {
-        element: <ProfileGuard />,
+        element: <DashboardGuard />,
         children: [
           {
             path: '/dashboard',

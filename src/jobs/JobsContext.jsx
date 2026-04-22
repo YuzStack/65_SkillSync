@@ -159,7 +159,6 @@ function JobsProvider({ children }) {
     <JobsContext.Provider
       value={{
         jobs: filteredJobs,
-        allJobs: jobs,
         activeJob,
         savedJobs,
         filters,

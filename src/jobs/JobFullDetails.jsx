@@ -7,17 +7,17 @@ import {
   Dot,
   MapPin,
 } from 'lucide-react';
-import AiInsight from './AiInsight';
-import { useJobs } from '../../contexts/JobsContext';
-import Message from '../Message';
-import Loader from '../Loader';
+import AiInsight from '../ai-insight/AiInsight';
+import { useJobs } from './JobsContext';
+import Message from '../ui/Message';
+import Loader from '../ui/Loader';
 
-export default function RightPanel() {
+export default function JobFullDetails() {
   const { activeJob, dispatch, savedJobs } = useJobs();
 
   if (!activeJob)
     return (
-      <div className='min-h-[calc(100vh-64px)] p-6 lg:col-span-8'>
+      <div className='h-[calc(100vh-64px)] p-6 lg:col-span-8'>
         <Message text='Select a job to view details' />
       </div>
     );

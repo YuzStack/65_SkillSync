@@ -1,6 +1,6 @@
 import { Bookmark } from 'lucide-react';
 import { NavLink } from 'react-router';
-import { useJobs } from '../../contexts/JobsContext';
+import { useJobs } from './JobsContext';
 
 function styleNavLink({ isActive }) {
   return `flex cursor-pointer items-center justify-center ${isActive ? 'border-theme border-b' : 'text-paragraph'}`;

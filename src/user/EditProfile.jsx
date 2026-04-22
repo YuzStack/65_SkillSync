@@ -1,6 +1,6 @@
 import { X } from 'lucide-react';
 import { useState } from 'react';
-import { useUser } from '../../contexts/UserContext';
+import { useUser } from './UserContext';
 
 export default function EditProfile({ setShowEditProfile }) {
   const { user, dispatch } = useUser();
