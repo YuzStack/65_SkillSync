@@ -2,9 +2,10 @@ import { Navigate } from 'react-router';
 import AppLayout from './ui/AppLayout';
 import DashboardGuard from './ui/DashboardGuard';
 import Dashboard from './ui/Dashboard';
-import AllJobs from './jobs/AllJobs';
-import CreateProfile from './user/CreateProfile.';
-import SavedJobs from './jobs/SavedJobs';
+import AllJobs from './features/jobs/AllJobs';
+// import CreateProfile from './user/CreateProfile.';
+import SavedJobs from './features/jobs/SavedJobs';
+import CreateProfile from './features/user/CreateProfile.';
 
 const routes = [
   {

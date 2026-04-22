@@ -1,7 +1,7 @@
 import { Bookmark } from 'lucide-react';
 import { useJobs } from './JobsContext';
-import Message from '../ui/Message';
-import Loader from '../ui/Loader';
+import Message from '../../ui/Message';
+import Loader from '../../ui/Loader';
 
 export default function Jobs() {
   const { jobs, isLoading, error, dispatch, activeJob, savedJobs } = useJobs();

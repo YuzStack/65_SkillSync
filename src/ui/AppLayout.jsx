@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router';
-import { UserProvider } from '../user/UserContext';
-import { JobsProvider } from '../jobs/JobsContext';
+import { JobsProvider } from '../features/jobs/JobsContext';
+import { UserProvider } from '../features/user/UserContext';
 
 export default function AppLayout() {
   return (

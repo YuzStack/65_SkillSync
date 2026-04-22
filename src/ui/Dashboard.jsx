@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from './Header';
 import Main from './Main';
-import EditProfile from '../user/EditProfile';
+import EditProfile from '../features/user/EditProfile';
 
 export default function Dashboard() {
   const [showEditProfle, setShowEditProfile] = useState(false);

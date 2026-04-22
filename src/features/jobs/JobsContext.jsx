@@ -5,7 +5,7 @@ import {
   useEffect,
   useReducer,
 } from 'react';
-import useLocalStorage from '../hooks/useLocalStorage';
+import useLocalStorage from '../../hooks/useLocalStorage';
 
 const JobsContext = createContext();
 

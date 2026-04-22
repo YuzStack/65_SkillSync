@@ -9,8 +9,8 @@ import {
 } from 'lucide-react';
 import AiInsight from '../ai-insight/AiInsight';
 import { useJobs } from './JobsContext';
-import Message from '../ui/Message';
-import Loader from '../ui/Loader';
+import Message from '../../ui/Message';
+import Loader from '../../ui/Loader';
 
 export default function JobFullDetails() {
   const { activeJob, dispatch, savedJobs } = useJobs();

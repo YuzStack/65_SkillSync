@@ -1,5 +1,5 @@
+import JobFullDetails from '../features/jobs/JobFullDetails';
 import LeftPanel from './LeftPanel';
-import JobFullDetails from '../jobs/JobFullDetails';
 
 export default function Main() {
   return (

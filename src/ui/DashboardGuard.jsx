@@ -1,5 +1,5 @@
 import { Navigate, Outlet } from 'react-router';
-import { useUser } from '../user/UserContext';
+import { useUser } from '../features/user/UserContext';
 
 export default function DashboardGuard() {
   const { user } = useUser();
