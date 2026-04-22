@@ -1,17 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import 'tailwindcss';
 
-body {
-  background-color: #0a0a0a;
-  color: #e5e5e5;
-  font-family: 'Inter', sans-serif;
-}
-
-button {
-  cursor: pointer;
+@layer base {
+  button {
+    cursor: pointer;
+  }
 }
 
 @theme {
+  --font-base: 'Inter', sans-serif;
+
   --color-headline: #e5e5e5;
   --color-paragraph: #737373;
 
