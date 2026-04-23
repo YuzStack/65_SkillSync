@@ -83,10 +83,9 @@ export default function JobFullDetails() {
           </div>
         )}
       </div>
-      {/* <AiInsight /> */}
-      <button className='bg-theme hover:bg-theme/80 my-4 rounded-lg p-2 px-3 text-sm transition-all hover:scale-102'>
-        Get AI Analysis
-      </button>
+
+      <AiInsight key={activeJob.jobId} />
+
       <div className='mt-6'>
         <h2 className='mb-3 text-lg font-semibold lg:text-xl'>
           About the Role

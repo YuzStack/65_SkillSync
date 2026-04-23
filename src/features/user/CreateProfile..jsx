@@ -57,26 +57,26 @@ export default function CreateProfile() {
         </header>
         <form className='space-y-6 p-6' onSubmit={handleSubmit}>
           <label className='flex flex-col gap-1.5'>
-            <p className='text-sm md:text-base'>
-              Full Name <span className='text-red-400'>*</span>
-            </p>
+            <p className='text-sm md:text-base'>Full Name</p>
             <input
               type='text'
               className='bg-bg-primary focus:ring-theme h-10 w-full rounded-lg p-3 transition-colors focus:ring-1 focus:outline-0'
               placeholder='e.g., Yusuf Oyinlola'
               value={fullName}
               onChange={e => setFullName(e.target.value)}
-              required
             />
           </label>
           <label className='flex flex-col gap-1.5'>
-            <p className='text-sm md:text-base'>Professional Bio</p>
+            <p className='text-sm md:text-base'>
+              Professional Bio <span className='text-red-400'>*</span>
+            </p>
             <textarea
               className='bg-bg-primary focus:ring-theme w-full rounded-lg p-3 transition-colors focus:ring-1 focus:outline-0'
               placeholder='Tell us about your experience...'
               rows={4}
               value={profBio}
               onChange={e => setProfBio(e.target.value)}
+              required
             />
           </label>
           <label className='flex flex-col gap-1.5'>
