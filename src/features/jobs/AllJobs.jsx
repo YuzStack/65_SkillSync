@@ -36,8 +36,8 @@ export default function Jobs() {
       </div>
     );
 
-  const lastJobIndex = currentPage * jobsPerPage;
-  const firstJobIndex = lastJobIndex - jobsPerPage;
+  const firstJobIndex = (currentPage - 1) * jobsPerPage;
+  const lastJobIndex = firstJobIndex + jobsPerPage;
 
   const currentJobs = jobs.slice(firstJobIndex, lastJobIndex);
   const totalPages = Math.ceil(jobs.length / jobsPerPage);
