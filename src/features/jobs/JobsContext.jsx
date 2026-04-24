@@ -11,6 +11,8 @@ const JobsContext = createContext();
 
 const initialState = {
   jobs: [],
+  currentPage: 1,
+  jobsPerPage: 10,
   activeJob: null,
   savedJobs: [],
   filters: {
@@ -27,8 +29,16 @@ function reducer(curState, action) {
       return { ...curState, isLoading: true };
     case 'jobs/loaded':
       return { ...curState, jobs: action.payload, isLoading: false };
+    case 'jobs/setPage':
+      return { ...curState, currentPage: action.payload };
     case 'jobs/clear':
-      return { ...curState, jobs: [], activeJob: null, error: '' };
+      return {
+        ...curState,
+        jobs: [],
+        activeJob: null,
+        error: '',
+        currentPage: 1,
+      };
     case 'job/setActive': {
       const activeJob = curState.jobs.find(job => job.jobId === action.payload);
       const newJobs = curState.jobs.map(job => ({
@@ -87,7 +97,8 @@ function JobsProvider({ children }) {
     'skillSync_savedJobs',
   );
 
-  const [{ jobs, activeJob, savedJobs, filters, isLoading, error }, dispatch] =
+  // prettier-ignore
+  const [{ jobs, currentPage, jobsPerPage, activeJob, savedJobs, filters, isLoading, error }, dispatch] =
     useReducer(reducer, { ...initialState, savedJobs: storedSavedJobs });
 
   const filteredJobs = jobs.filter(job => {
@@ -123,7 +134,7 @@ function JobsProvider({ children }) {
 
     try {
       const response = await fetch(
-        `https://jsearch.p.rapidapi.com/search?query=${searchQuery}&num_pages=1`,
+        `https://jsearch.p.rapidapi.com/search?query=${searchQuery}&num_pages=5`,
         options,
       );
 
@@ -159,6 +170,8 @@ function JobsProvider({ children }) {
     <JobsContext.Provider
       value={{
         jobs: filteredJobs,
+        currentPage,
+        jobsPerPage,
         activeJob,
         savedJobs,
         filters,
