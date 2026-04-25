@@ -3,16 +3,30 @@ import AppLayout from './ui/AppLayout';
 import DashboardGuard from './ui/DashboardGuard';
 import Dashboard from './ui/Dashboard';
 import AllJobs from './features/jobs/AllJobs';
-// import CreateProfile from './user/CreateProfile.';
 import SavedJobs from './features/jobs/SavedJobs';
 import CreateProfile from './features/user/CreateProfile.';
+import Home from './pages/home/Home';
+import HowItWorks from './pages/how-it-works/HowItWorks';
+import PageLayout from './pages/PageLayout';
 
 const routes = [
   {
-    path: '/',
+    element: <PageLayout />,
+    children: [
+      {
+        index: true,
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/how-it-works',
+        element: <HowItWorks />,
+      },
+    ],
+  },
+  {
     element: <AppLayout />,
     children: [
-      // Public Route
       {
         path: '/create-profile',
         element: <CreateProfile />,
@@ -32,12 +46,6 @@ const routes = [
             ],
           },
         ],
-      },
-
-      // Redirect home to dashboard
-      {
-        index: true,
-        element: <Navigate to='/dashboard' replace />,
       },
     ],
   },
