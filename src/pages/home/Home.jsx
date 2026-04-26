@@ -1,10 +1,14 @@
+import Benefits from './Benefits';
 import Hero from './Hero';
-import PrimaryHeader from './PrimaryHeader';
+import PrimaryHeader from '../ui/PrimaryHeader';
+import FinalCTA from './FinalCTA';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Hero />
-    </div>
+      <Benefits />
+      <FinalCTA />
+    </>
   );
 }

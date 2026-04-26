@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 export default function Hero() {
   return (
-    <div className='flex min-h-[calc(100vh-64px)] items-center p-6'>
+    <section className='container mx-auto flex min-h-[calc(100vh-64px)] items-center'>
       <div className='flex w-full items-center justify-between'>
         <div className='flex flex-col gap-4'>
           <h1 className='text-6xl font-bold'>
@@ -46,6 +46,6 @@ export default function Hero() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

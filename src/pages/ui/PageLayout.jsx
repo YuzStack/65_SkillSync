@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router';
-import PrimaryHeader from './home/PrimaryHeader';
+import PrimaryHeader from './PrimaryHeader';
+import Footer from './Footer';
 
 export default function PageLayout() {
   return (
@@ -8,6 +9,7 @@ export default function PageLayout() {
       <main>
         <Outlet />
       </main>
+      <Footer />
     </div>
   );
 }

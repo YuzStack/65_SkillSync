@@ -7,7 +7,7 @@ import SavedJobs from './features/jobs/SavedJobs';
 import CreateProfile from './features/user/CreateProfile.';
 import Home from './pages/home/Home';
 import HowItWorks from './pages/how-it-works/HowItWorks';
-import PageLayout from './pages/PageLayout';
+import PageLayout from './pages/ui/PageLayout';
 
 const routes = [
   {
