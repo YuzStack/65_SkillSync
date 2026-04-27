@@ -6,7 +6,7 @@ export default function PageLayout() {
   return (
     <div>
       <PrimaryHeader />
-      <main>
+      <main className='mt-16 sm:mt-0'>
         <Outlet />
       </main>
       <Footer />

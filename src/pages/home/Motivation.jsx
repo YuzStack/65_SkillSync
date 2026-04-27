@@ -1,6 +1,6 @@
 import { CircleAlert, Lightbulb, Search } from 'lucide-react';
 
-export default function Benefits() {
+export default function Motivation() {
   return (
     <section className='container mx-auto mt-6 flex flex-col items-center gap-4 p-4 lg:mt-4 lg:gap-6 lg:p-6'>
       <h2 className='text-center text-2xl font-bold md:text-3xl lg:text-4xl'>

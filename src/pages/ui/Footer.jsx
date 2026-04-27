@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className='border-t border-neutral-800 p-4 lg:p-6'>
-      <p className='text-paragraph/80 text-center lg:text-lg'>
+      <p className='text-paragraph/80 text-center text-sm lg:text-base'>
         &copy; Copyright {new Date().getFullYear()}. Designed and Developed by{' '}
         <a
           href='https://www.linkedin.com/in/yusuf-oyinlola'
