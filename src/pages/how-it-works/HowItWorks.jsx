@@ -1,3 +1,9 @@
+import SyncProcss from './SyncProcss';
+
 export default function HowItWorks() {
-  return <div>How It Works</div>;
+  return (
+    <div>
+      <SyncProcss />
+    </div>
+  );
 }

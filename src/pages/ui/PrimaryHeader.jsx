@@ -60,7 +60,7 @@ export default function PrimaryHeader() {
           </div>
         </header>
         <nav
-          className={`bg-bg-sec fixed top-16 right-0 z-10 flex h-[calc(100vh-64px)] w-50 flex-col gap-2 border-l-2 border-neutral-800 p-4 transition-all ${!isMobileMenuOpen && 'translate-x-full'}`}
+          className={`bg-bg-sec fixed top-16 right-0 z-10 flex h-[calc(100vh-64px)] w-50 flex-col gap-2 border-l-2 border-neutral-800 p-4 transition-all duration-300 ${!isMobileMenuOpen && 'translate-x-full'}`}
         >
           <NavLink to='/' className={styleMobileNavLink}>
             Home
