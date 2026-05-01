@@ -11,7 +11,7 @@ export default function TechTransparency() {
         intelligence, and a seamless user experience.
       </p>
 
-      <div className='mt-2 flex flex-wrap items-center gap-6 lg:mt-4'>
+      <div className='mt-2 flex flex-col flex-wrap items-stretch gap-4 sm:flex-row sm:gap-5 md:gap-6 lg:mt-4'>
         <div className='bg-bg-sec flex-1 space-y-3 rounded-lg border border-neutral-800 p-4 lg:p-6'>
           <div className='flex items-center gap-3'>
             <i className='fa-solid fa-layer-group text-theme text-2xl'></i>
