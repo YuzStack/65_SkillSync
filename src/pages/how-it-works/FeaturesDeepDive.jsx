@@ -1,4 +1,19 @@
 import { Brain, LayoutDashboard, ShieldUser, Zap } from 'lucide-react';
+// eslint-disable-next-line
+import { motion } from 'motion/react';
+
+const cardVariants = {
+  offscreen: { opacity: 0, scale: 0.9 },
+  onscreen: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
 
 export default function FeaturesDeepDive() {
   return (
@@ -12,7 +27,13 @@ export default function FeaturesDeepDive() {
       </p>
 
       <div className='mt-4 grid gap-6 lg:mt-4 lg:grid-cols-12'>
-        <div className='bg-bg-sec rounded-xl p-4 lg:col-span-5 lg:row-span-2 lg:p-6'>
+        <motion.div
+          className='bg-bg-sec rounded-xl p-4 lg:col-span-5 lg:row-span-2 lg:p-6'
+          variants={cardVariants}
+          initial='offscreen'
+          whileInView='onscreen'
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <div className='flex h-full flex-col gap-6'>
             <div className='flex flex-col gap-2 md:gap-4'>
               <Brain className='text-theme bg-theme/20 size-8 rounded-lg p-2 lg:size-10' />
@@ -31,9 +52,15 @@ export default function FeaturesDeepDive() {
               className='mt-auto h-50 rounded-lg md:h-75 lg:h-auto'
             />
           </div>
-        </div>
+        </motion.div>
 
-        <div className='bg-bg-sec rounded-xl p-4 lg:col-span-7 lg:p-6'>
+        <motion.div
+          className='bg-bg-sec rounded-xl p-4 lg:col-span-7 lg:p-6'
+          variants={cardVariants}
+          initial='offscreen'
+          whileInView='onscreen'
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <div className='flex flex-col justify-between gap-6 md:flex-row'>
             <div className='flex h-full flex-col gap-2 md:gap-4'>
               <Zap className='text-theme bg-theme/20 size-8 rounded-lg p-2 lg:size-10' />
@@ -52,9 +79,15 @@ export default function FeaturesDeepDive() {
               className='mx-auto h-75 w-70 rounded-lg'
             />
           </div>
-        </div>
+        </motion.div>
 
-        <div className='bg-bg-sec rounded-xl p-4 lg:col-span-7 lg:p-6'>
+        <motion.div
+          className='bg-bg-sec rounded-xl p-4 lg:col-span-7 lg:p-6'
+          variants={cardVariants}
+          initial='offscreen'
+          whileInView='onscreen'
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <div className='flex flex-col justify-between gap-6 md:flex-row'>
             <div className='flex h-full flex-col gap-2 md:gap-4'>
               <LayoutDashboard className='text-theme bg-theme/20 size-8 rounded-lg p-2 lg:size-10' />
@@ -73,9 +106,15 @@ export default function FeaturesDeepDive() {
               className='mx-auto rounded-lg sm:h-75 sm:w-70'
             />
           </div>
-        </div>
+        </motion.div>
 
-        <div className='bg-bg-sec rounded-xl p-4 lg:col-span-12 lg:p-6'>
+        <motion.div
+          className='bg-bg-sec rounded-xl p-4 lg:col-span-12 lg:p-6'
+          variants={cardVariants}
+          initial='offscreen'
+          whileInView='onscreen'
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <div className='flex flex-col justify-between gap-3 md:gap-4 xl:flex-row xl:items-center'>
             <div className='flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-6 lg:gap-8'>
               <ShieldUser className='text-theme bg-theme/20 size-8 shrink-0 rounded-lg p-2 lg:size-10' />
@@ -99,7 +138,7 @@ export default function FeaturesDeepDive() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

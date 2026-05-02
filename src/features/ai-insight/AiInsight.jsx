@@ -3,6 +3,7 @@ import { useJobs } from '../jobs/JobsContext';
 import { useUser } from '../user/UserContext';
 import { useState } from 'react';
 import { getJobAnalysis } from './aiService';
+import MatchScoreCounter from './MatchScoreCounter';
 
 export default function AiInsight() {
   const { activeJob } = useJobs();
@@ -43,7 +44,7 @@ export default function AiInsight() {
           <h3 className='text-lg font-semibold'>AI Analysis</h3>
         </div>
         <div className='bg-theme/10 border-theme/20 text-theme rounded-full border p-2 px-3 text-sm'>
-          {analysis.percentage}% Match
+          <MatchScoreCounter targetValue={analysis.percentage} /> Match
         </div>
       </div>
       <ul className='mt-3 space-y-2'>

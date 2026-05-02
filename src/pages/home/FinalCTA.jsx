@@ -1,4 +1,6 @@
 import { Link } from 'react-router';
+// eslint-disable-next-line
+import { motion } from 'motion/react';
 
 export default function FinalCTA() {
   return (
@@ -12,9 +14,23 @@ export default function FinalCTA() {
           and find their perfect role.
         </p>
         <Link to='/dashboard'>
-          <button className='bg-theme hover:bg-theme/90 shadow-theme mt-2 rounded-lg p-2 px-2.5 font-semibold text-black shadow transition-all hover:scale-105 lg:mt-4 lg:px-4 lg:py-3 lg:text-lg'>
+          <motion.button
+            className='bg-theme hover:bg-theme/90 shadow-theme mt-2 rounded-lg p-2 px-2.5 font-semibold text-black shadow transition-all hover:scale-105 lg:mt-4 lg:px-4 lg:py-3 lg:text-lg'
+            animate={{
+              boxShadow: [
+                '0px 0px 0px rgba(59, 130, 246, 0)',
+                '0px 0px 15px rgba(59, 130, 246, 0.5)',
+                '0px 0px 0px rgba(59, 130, 246, 0)',
+              ],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+          >
             Launch Application
-          </button>
+          </motion.button>
         </Link>
       </div>
     </section>
