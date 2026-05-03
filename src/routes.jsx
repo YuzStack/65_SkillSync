@@ -1,11 +1,10 @@
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import { Navigate } from 'react-router';
 
 // Statically import layouts & guards (because they are needed immediately the app loads)
 import AppLayout from './ui/AppLayout';
 import PageLayout from './pages/ui/PageLayout';
 import DashboardGuard from './ui/DashboardGuard';
-import FullPageSpinner from './ui/FullPageSpinner'; // Will be needed immediately too
 
 // Dynamically import pages & dashboards (because they are only needed when their routes are visited)
 const Dashboard = lazy(() => import('./ui/Dashboard'));
@@ -22,19 +21,11 @@ const routes = [
       {
         index: true,
         path: '/',
-        element: (
-          <Suspense fallback={<FullPageSpinner />}>
-            <Home />
-          </Suspense>
-        ),
+        element: <Home />,
       },
       {
         path: '/how-it-works',
-        element: (
-          <Suspense fallback={<FullPageSpinner />}>
-            <HowItWorks />
-          </Suspense>
-        ),
+        element: <HowItWorks />,
       },
     ],
   },
@@ -48,11 +39,7 @@ const routes = [
 
       // Protected Routes
       {
-        element: (
-          <Suspense fallback={<FullPageSpinner />}>
-            <DashboardGuard />
-          </Suspense>
-        ),
+        element: <DashboardGuard />,
         children: [
           {
             path: '/dashboard',
