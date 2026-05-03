@@ -1,13 +1,19 @@
+import { lazy, Suspense } from 'react';
 import { Navigate } from 'react-router';
+
+// Statically import layouts & guards (because they are needed immediately the app loads)
 import AppLayout from './ui/AppLayout';
-import DashboardGuard from './ui/DashboardGuard';
-import Dashboard from './ui/Dashboard';
-import AllJobs from './features/jobs/AllJobs';
-import SavedJobs from './features/jobs/SavedJobs';
-import CreateProfile from './features/user/CreateProfile.';
-import Home from './pages/home/Home';
-import HowItWorks from './pages/how-it-works/HowItWorks';
 import PageLayout from './pages/ui/PageLayout';
+import DashboardGuard from './ui/DashboardGuard';
+import FullPageSpinner from './ui/FullPageSpinner'; // Will be needed immediately too
+
+// Dynamically import pages & dashboards (because they are only needed when their routes are visited)
+const Dashboard = lazy(() => import('./ui/Dashboard'));
+const AllJobs = lazy(() => import('./features/jobs/AllJobs'));
+const SavedJobs = lazy(() => import('./features/jobs/SavedJobs'));
+const CreateProfile = lazy(() => import('./features/user/CreateProfile.'));
+const Home = lazy(() => import('./pages/home/Home'));
+const HowItWorks = lazy(() => import('./pages/how-it-works/HowItWorks'));
 
 const routes = [
   {
@@ -16,11 +22,19 @@ const routes = [
       {
         index: true,
         path: '/',
-        element: <Home />,
+        element: (
+          <Suspense fallback={<FullPageSpinner />}>
+            <Home />
+          </Suspense>
+        ),
       },
       {
         path: '/how-it-works',
-        element: <HowItWorks />,
+        element: (
+          <Suspense fallback={<FullPageSpinner />}>
+            <HowItWorks />
+          </Suspense>
+        ),
       },
     ],
   },
@@ -34,7 +48,11 @@ const routes = [
 
       // Protected Routes
       {
-        element: <DashboardGuard />,
+        element: (
+          <Suspense fallback={<FullPageSpinner />}>
+            <DashboardGuard />
+          </Suspense>
+        ),
         children: [
           {
             path: '/dashboard',
