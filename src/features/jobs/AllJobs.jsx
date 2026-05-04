@@ -54,7 +54,7 @@ export default function Jobs() {
             }}
           >
             <div className='flex items-center gap-4'>
-              <div className='flex size-10 items-center justify-center overflow-hidden rounded-full bg-blue-500 sm:size-12.5'>
+              <div className='flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-blue-500 sm:size-12.5'>
                 {job.employerLogo ? (
                   <img
                     src={job.employerLogo}
