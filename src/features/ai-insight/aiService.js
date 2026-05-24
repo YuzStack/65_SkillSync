@@ -25,7 +25,7 @@ export async function getJobAnalysis(user, job) {
 
   try {
     const response = await genAI.models.generateContent({
-      model: 'gemini-3-flash-preview',
+      model: 'gemini-3.5-flash',
       contents: prompt,
     });
 
